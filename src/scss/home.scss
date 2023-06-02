@@ -1,0 +1,17 @@
+@use "_fonts";
+@use "_reset";
+@use "_icons";
+@use "_global";
+
+@use"_navbar";
+
+/* === START hero section === */
+
+.header {
+    background: firebrick;
+}
+
+/* === END hero section === */
+
+
+@import "_footer.scss";
