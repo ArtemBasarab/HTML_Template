@@ -99,6 +99,7 @@
       transition: 0.2s ease;
       transform: translateX(-100%);
       text-align: center;
+      z-index: 999;
       &.nav-active {
         transform: translateX(0);
         
