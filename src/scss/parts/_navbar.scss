@@ -1,0 +1,160 @@
+/* === START navbar styles === */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: teal;
+  &__block {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+  }
+  &__logo-block {
+  }
+
+  &__logo {
+  }
+
+  &__nav-block {
+  }
+
+  &__nav-btn {
+    display: none;
+  }
+
+  &__nav {
+    position: relative;
+    margin-left: 20px;
+  }
+
+  &__nev-item {
+  }
+
+  &__nav-link {
+    position: relative;
+      & > img {
+        position: absolute;
+        margin-top: 4px;
+        margin-left: 2px;
+        width: 12px;
+      }
+  }
+
+  &__sub-nav {
+    
+  }
+
+  &__sub-nav-item {
+  }
+
+  &__subnav-link {
+  }
+  @media screen and (min-width: 767px) {
+    &__nav {
+      display: flex;
+      align-items: center;
+    }
+    &__nav-item {
+      margin-left: 30px;
+    }
+    &__sub-nav {
+      position: absolute;
+      top: 100%;
+      background: red;
+      padding: 15px 10px;
+      width: max-content;
+      transform: translate(0, 10%);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: .3s ease;
+      
+    }
+    &__nav-link {
+      
+    }
+    &__sub-nav-item {
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &__nav-block {
+      position: fixed;
+      overflow: auto;
+      top: 85px;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      transition: .3s ease;
+      background: seagreen;
+    }
+    &__nav-block-active {
+      left: 0;
+    }
+    &__nav-btn {
+      display: block;
+      z-index: 5;
+      width: 30px;
+      height: 18px;
+      cursor: pointer;
+      position: relative;
+      & > span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+      }
+      & > span:nth-child(2) {
+        top: 50%
+      }
+      & > span:nth-child(3) {
+        top: 100%
+      } 
+    }
+    &__nav-btn-active {
+      transition: .3s ease;
+      & > span:first-child {
+        top: 50%;
+        transform: rotate(45deg);
+      }
+      & > span:nth-child(2) {
+        opacity: 0;
+
+      }
+      & > span:last-child {
+        top: 50%;
+        transform: rotate(-45deg);
+      }
+
+    }
+    &__nav {
+      width: 80%;
+      margin: 0 auto;
+    }
+    &__sub-nav {
+      display: none;
+      width: 100%;
+    }
+    &__nav-dropdown-item-active > .navbar__sub-nav {
+      display: block;
+    }
+  }
+  
+}
+body.pc .navbar__nav-dropdown-item:hover > .navbar__sub-nav {
+  transform: translate(0,0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+
+
+
+/* === END navbar styles === */

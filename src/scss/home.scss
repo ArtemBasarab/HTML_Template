@@ -1,9 +1,8 @@
-@use "_fonts";
-@use "_reset";
-@use "_icons";
-@use "_global";
-
-@use"_navbar";
+@import "parts/_fonts";
+@import "parts/_reset";
+@import "parts/_icons";
+@import "parts/_global";
+@import"parts/_navbar";
 
 /* === START hero section === */
 
@@ -14,4 +13,4 @@
 /* === END hero section === */
 
 
-@import "_footer.scss";
+@import "parts/_footer.scss";

@@ -10,9 +10,9 @@ import { browserSynchronization } from './gulp/browserSync.js'
 
 const watcher = () => {
   gulp.watch(['src/*.html', 'src/partials/*.html'], buildHTML)
-  gulp.watch('src/scss/*.scss', buildStyles)
-  gulp.watch('src/js/*.js', buildJS)
-  gulp.watch('src/img/*.*', copyImg)
+  gulp.watch('src/scss/**/*.scss', buildStyles)
+  gulp.watch('src/js/**/*.js', buildJS)
+  gulp.watch('src/img/**/*.*', copyImg)
 }
 
 gulp.task('build', gulp.series(cleanDist, copyFiles))
